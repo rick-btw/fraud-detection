@@ -114,12 +114,55 @@ from src.data_generator import SyntheticDataGenerator
 generator = SyntheticDataGenerator()
 graph = generator.load_edge_list('data/my_graph.edgelist')
 
+# Load Bitcoin OTC dataset (real-world fraud detection data)
+# Download from: https://snap.stanford.edu/data/soc-sign-bitcoinotc.html
+graph = SparseGraph.load_from_bitcoin_otc_csv('data/soc-sign-bitcoinotc.csv.gz', 
+                                              use_negative_ratings=True)
+
 # Or build manually
 graph = SparseGraph(num_nodes=1000)
 graph.add_edge(0, 1)
 graph.add_edge(1, 2)
 # ... add more edges
 ```
+
+### Running Bitcoin OTC Experiments
+
+The project includes a script to run experiments on the real-world Bitcoin OTC trust network dataset:
+
+```bash
+# First, download the dataset
+cd data
+wget https://snap.stanford.edu/data/soc-sign-bitcoinotc.csv.gz
+
+# Then run the experiments
+python -m src.bitcoin_experiments
+```
+
+This will generate:
+- `results/bitcoin_convergence.png`: Convergence analysis on real data
+- `results/bitcoin_runtime.png`: Runtime scalability on real data
+
+### Running Caltech36 Facebook Experiments
+
+The project includes a script to run experiments on the Caltech36 Facebook social network dataset:
+
+```bash
+# First, download the dataset
+./download_caltech36_dataset.sh
+
+# Or manually:
+cd data
+wget https://nrvis.com/download/data/social/socfb-Caltech36.zip
+unzip socfb-Caltech36.zip
+
+# Then run the experiments
+python -m src.caltech36_experiments
+```
+
+This will generate:
+- `results/caltech36_convergence.png`: Convergence analysis on real data
+- `results/caltech36_runtime.png`: Runtime scalability on real data
 
 ### Running Individual Experiments
 

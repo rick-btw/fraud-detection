@@ -683,7 +683,7 @@ The system demonstrates the power of "Guilt by Association" for fraud detection 
 The project follows a modular structure for maintainability and clarity:
 
 ```
-FraudDetectionC01/
+Fraud-Detection/
 ├── src/
 │   ├── __init__.py              # Package initialization
 │   ├── sparse_graph.py          # Sparse graph data structure (CSR)

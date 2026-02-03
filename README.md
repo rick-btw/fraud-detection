@@ -43,7 +43,7 @@ pip install -r requirements.txt
 ## Project Structure
 
 ```
-FraudDetectionC01/
+Fraud-Detection/
 ├── src/
 │   ├── __init__.py
 │   ├── sparse_graph.py          # Sparse graph data structure (CSR)
@@ -51,11 +51,17 @@ FraudDetectionC01/
 │   ├── data_generator.py        # Synthetic data generator
 │   ├── analysis.py              # Analysis and evaluation tools
 │   ├── visualization.py         # Plotting and visualization
-│   └── experiments.py           # Main experiment script
+│   ├── experiments.py           # Main experiment script
+│   ├── bitcoin_experiments.py   # Bitcoin OTC dataset experiments
+│   └── caltech36_experiments.py # Caltech36 Facebook dataset experiments
 ├── data/                        # Dataset directory
 ├── results/                     # Output plots and results
 ├── README.md                    # This file
-└── REPORT_DRAFT.md              # Detailed report structure
+├── REPORT_DRAFT.md              # Detailed report structure
+├── requirements.txt             # Python dependencies
+├── test_basic.py                # Basic tests
+├── download_bitcoin_dataset.sh  # Bitcoin OTC dataset download script
+└── download_caltech36_dataset.sh # Caltech36 dataset download script
 ```
 
 ## Usage

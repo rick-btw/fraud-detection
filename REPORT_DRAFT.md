@@ -2,7 +2,7 @@
 
 **Author:** Amirali Saket  
 **Course:** Data Structures & Algorithms  
-**Date:** February 1, 2026
+**Date:** Dec 2025 - Feb 2026
 
 ---
 
